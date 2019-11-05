@@ -1,0 +1,8 @@
+#To ignore
+
+#Folder
+.idea/*
+target/*
+
+#BuildStuff
+*.class
