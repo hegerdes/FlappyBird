@@ -15,7 +15,7 @@ public class Bird {
     private VertexArray mesh;
     private Texture texture;
 
-    private Vector3f position = new Vector3f();
+    private Vector3f position;
     private float rot;
     private float delta = 0.0f;
 
@@ -39,15 +39,17 @@ public class Bird {
                 1, 1
         };
 
+        delta = 0.0f;
+        position = new Vector3f();
         mesh = new VertexArray(vertices, indices, tcs);
         texture = new Texture("res/bird.png");
     }
 
     public void update() {
         position.y -= delta;
-        if (Input.isKeyDown(GLFW_KEY_SPACE))
+        if (Input.isKeyDown(GLFW_KEY_SPACE)){
             delta = -0.15f;
-        else
+        }else
             delta += 0.01f;
 
         rot = -delta * 90.0f;

@@ -88,6 +88,11 @@ public class Level {
             control = false;
         }
 
+        if (control && collisionScreen()){
+            bird.fall();
+            reset = true;
+        }
+
         if (!control && Input.isKeyDown(GLFW_KEY_SPACE))
             reset = true;
 
@@ -108,6 +113,10 @@ public class Level {
         }
         Pipe.getMesh().unbind();
         Pipe.getTexture().unbind();
+    }
+
+    private boolean collisionScreen(){
+        return (bird.getY() < - 40  || bird.getY() > 20);
     }
 
     private boolean collision() {
