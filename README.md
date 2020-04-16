@@ -1,5 +1,7 @@
 # Flappy
 
+![Java CI with Maven](https://github.com/hegerdes/FlappyBird/workflows/Java%20CI%20with%20Maven/badge.svg)
+
 This is a cross-plattform clone of Flappy Bird. This project was inspired by [TheCherno](https://github.com/TheCherno "The Cherno"). I updated his old implementation and added additional features.
 
 ## Example
